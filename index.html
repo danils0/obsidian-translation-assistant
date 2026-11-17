@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#202124">
+<title>Obsidian Translation Assistant</title>
+<style>
+:root{color-scheme:dark;--bg:#202124;--panel:#292a2d;--panel-soft:#242528;--line:#414247;--text:#e8e8e8;--muted:#a5a6aa;--accent:#9b8bd8;--green:#75bd8b;--yellow:#d8b36c;--red:#d98282;--radius:7px;font:14px/1.45 "Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}button,input,select{font:inherit}button{color:inherit;background:#343539;border:1px solid var(--line);border-radius:5px;padding:6px 10px;cursor:pointer}button:hover{border-color:var(--accent);background:#3a3b40}button:disabled{opacity:.55;cursor:wait}.primary{background:#514875;border-color:#70629c}.primary:hover{background:#60548a}.subtle{background:transparent}.wrap{max-width:1500px;margin:0 auto;padding:18px 20px 26px}.header{display:flex;align-items:center;gap:16px;margin-bottom:14px}.brand{min-width:0}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.04em}.header h1{font-size:20px;font-weight:600;margin:1px 0 0}.header-actions{margin-left:auto;display:flex;align-items:center;gap:10px}.state-line{font-size:12px;color:var(--muted);min-width:0}.settings{margin-bottom:12px;border-bottom:1px solid var(--line);padding:0 0 10px;color:var(--muted);font-size:12px}.settings summary{cursor:pointer;width:max-content}.settings-grid{display:grid;grid-template-columns:2fr 1fr 2fr 1fr;gap:9px;margin-top:12px}.field label{display:block;font-size:11px;margin-bottom:4px}.field input{width:100%;min-width:0;background:#1c1d20;border:1px solid var(--line);border-radius:5px;color:var(--text);padding:7px 8px}.settings-note{margin:8px 0 0}.tabs{display:flex;gap:3px;border-bottom:1px solid var(--line);margin:10px 0 12px}.tab{border:1px solid transparent;border-bottom:0;background:transparent;color:var(--muted);padding:9px 14px 10px;border-radius:6px 6px 0 0}.tab.active{color:var(--text);background:var(--panel);border-color:var(--line);position:relative}.tab.active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--panel)}.tab-count{font-size:11px;color:var(--muted);margin-left:6px}.workspace{display:grid;grid-template-columns:minmax(290px,36%) minmax(0,1fr);height:min(72vh,820px);min-height:480px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel)}.left{display:flex;flex-direction:column;min-width:0;min-height:0;border-right:1px solid var(--line);background:var(--panel-soft);overscroll-behavior:contain}.list-toolbar{display:flex;gap:7px;padding:9px;border-bottom:1px solid var(--line)}.list-toolbar input,.list-toolbar select{background:#1d1e21;color:var(--text);border:1px solid var(--line);border-radius:5px;padding:7px 8px;min-width:0}.list-toolbar input{flex:1;width:40%}.list-toolbar select{max-width:125px}.list-meta{padding:7px 10px;font-size:11px;color:var(--muted);border-bottom:1px solid #37383c;display:flex;justify-content:space-between}.item-list{overflow:auto;flex:1;min-height:0;overscroll-behavior:contain;scrollbar-gutter:stable}.item{padding:9px 11px;border-bottom:1px solid #37383c;border-left:3px solid transparent;cursor:pointer;min-width:0}.item:hover{background:#303136}.item.selected{background:#35343d;border-left-color:var(--accent)}.item-line{display:flex;gap:8px;align-items:center;min-width:0}.item-key{font:12px/1.35 Consolas,"Cascadia Code",monospace;color:#c9bafa;overflow-wrap:anywhere;flex:1}.item-state{font-size:10px;white-space:nowrap;color:var(--muted)}.item-snippet{font-size:12px;color:var(--muted);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:1px}.item-state.done{color:var(--green)}.item-state.todo{color:var(--yellow)}.item-state.problem{color:var(--red)}.right{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:17px 20px}.empty-state{height:100%;min-height:230px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px}.detail-head{display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:15px}.detail-title{min-width:0;flex:1}.detail-title .key-label{font:11px Consolas,monospace;color:var(--muted);overflow-wrap:anywhere}.detail-title h2{font-size:16px;font-weight:600;margin:3px 0 0;overflow-wrap:anywhere}.detail-actions{display:flex;gap:7px;flex-shrink:0}.section-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:14px 0 6px}.text-block{border:1px solid var(--line);border-radius:5px;background:#202124;padding:10px 11px;display:flex;gap:12px;align-items:flex-start}.text-block p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;flex:1;min-width:0}.text-block .lang{font-size:11px;min-width:118px;color:var(--muted);padding-top:1px}.text-block button{font-size:11px;padding:4px 7px;flex-shrink:0}.text-block.source{border-left:3px solid var(--accent)}.text-block.uk{border-left:3px solid var(--green)}.examples{display:grid;gap:6px}.more-examples{margin-top:8px}.more-examples summary{font-size:12px;color:var(--muted);cursor:pointer}.copy-note{font-size:11px;color:var(--muted);margin:10px 0 0}.problem-box{background:#342727;border:1px solid #684646;color:#e6b1b1;border-radius:5px;padding:9px 10px;margin:0 0 12px;font-size:12px}.memory{margin-top:15px;border-top:1px solid var(--line);padding-top:12px}.memory-row{display:flex;gap:10px;align-items:center;margin:5px 0;font-size:12px}.memory-row strong{color:var(--green);font-weight:500}.memory-row button{margin-left:auto;font-size:11px;padding:4px 7px}.footer{font-size:11px;color:var(--muted);padding:10px 2px 0}.spinner{display:inline-block;width:12px;height:12px;border:2px solid #666;border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;vertical-align:-2px;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.wrap{padding:12px}.workspace{grid-template-columns:1fr;grid-template-rows:minmax(210px,38%) minmax(0,1fr);height:min(78vh,760px);min-height:500px}.left{border-right:0;border-bottom:1px solid var(--line);height:auto;min-height:0}.right{min-height:0}.settings-grid{grid-template-columns:1fr 1fr}.header{align-items:flex-start}.header-actions{flex-direction:column;align-items:flex-end;gap:4px}.state-line{max-width:180px;text-align:right}}
+@media(max-width:480px){.header h1{font-size:18px}.tabs{overflow:auto}.tab{padding:8px 10px;white-space:nowrap}.list-toolbar{flex-wrap:wrap}.list-toolbar input{width:100%;flex-basis:100%}.list-toolbar select{max-width:none;flex:1}.right{padding:13px}.detail-head{flex-wrap:wrap}.detail-actions{width:100%}.text-block{gap:7px}.text-block .lang{min-width:76px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="header">
+    <div class="brand"><div class="eyebrow">Obsidian · website · uk</div><h1>Переклад сайту</h1></div>
+    <div class="header-actions"><span id="statusLine" class="state-line" aria-live="polite">Дані ще не завантажено</span><button id="loadBtn" class="primary">Оновити з GitHub</button></div>
+  </header>
+
+  <details class="settings">
+    <summary>Джерела GitHub</summary>
+    <div class="settings-grid">
+      <div class="field"><label for="sourceRepo">Англійська та інші мови</label><input id="sourceRepo" value="obsidianmd/obsidian-translations"></div>
+      <div class="field"><label for="sourceBranch">Гілка джерела</label><input id="sourceBranch" value="master"></div>
+      <div class="field"><label for="targetRepo">Український файл</label><input id="targetRepo" value="danils0/obsidian-translations"></div>
+      <div class="field"><label for="targetBranch">Гілка перекладу</label><input id="targetBranch" value="master"></div>
+    </div>
+    <p class="settings-note">EN та приклади беруться з оригінального репозиторію. UK — з твого форку. Інструмент нічого не записує в GitHub.</p>
+  </details>
+
+  <section id="workspaceSection" hidden>
+    <nav class="tabs" aria-label="Стан перекладу">
+      <button class="tab" data-state="done">Зроблено <span class="tab-count" id="doneCount">0</span></button>
+      <button class="tab" data-state="todo">Не зроблено <span class="tab-count" id="todoCount">0</span></button>
+      <button class="tab" data-state="problem">Проблеми <span class="tab-count" id="problemCount">0</span></button>
+    </nav>
+
+    <main class="workspace">
+      <aside class="left">
+        <div class="list-toolbar">
+          <input id="searchInput" type="search" placeholder="Знайти ключ або текст…" aria-label="Пошук">
+          <select id="sectionFilter" aria-label="Розділ"><option value="">Усі розділи</option></select>
+        </div>
+        <div class="list-meta"><span id="listCaption">Неперекладені записи</span><span id="entryCount">0</span></div>
+        <div class="item-list" id="entryList"><div class="empty-state">Завантажую дані…</div></div>
+      </aside>
+      <section class="right" id="entryDetail"><div class="empty-state">Вибери запис у списку.</div></section>
+    </main>
+  </section>
+
+  <footer class="footer">Джерело: GitHub · Копіювання працює без авторизації. Щоб змінити переклад, відкрий відповідний файл у GitHub.</footer>
+</div>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const state = {en:null,uk:null,locales:new Map(),appUk:null,terms:new Map(),activeTab:'todo',selectedKey:null,rows:[],issues:[]};
+  const fallbackLocales=['pl','de','es','fr','it','pt-BR','sv','ja','ko','zh','ar','bn','ro'];
+  const localeNames={en:'English',pl:'Polski',de:'Deutsch',es:'Español',fr:'Français',it:'Italiano','pt-BR':'Português (Brasil)',sv:'Svenska',ja:'日本語',ko:'한국어',zh:'中文',ar:'العربية',bn:'বাংলা',ro:'Română'};
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const decode=v=>String(v??'').replace(/\\(u[0-9a-fA-F]{4}|n|\\)/g,(_m,x)=>x==='n'?'\n':x==='\\'?'\\':String.fromCharCode(parseInt(x.slice(1),16)));
+  const normalize=v=>decode(v).replace(/\s+/g,' ').trim().toLocaleLowerCase('en');
+  const fmt=n=>new Intl.NumberFormat('uk-UA').format(n);
+  const getOriginal=r=>r?.properties?.original;
+  const getTranslation=r=>r?.properties?.translation;
+  const sectionOf=key=>key.split('.')[0]||'(інші)';
+  function repoParts(v,label){const s=v.trim().replace(/^https:\/\/github\.com\//,'').replace(/\.git$/,'');if(!/^[\w.-]+\/[\w.-]+$/.test(s))throw new Error(`Неправильний формат ${label}: owner/repository`);return s;}
+  function rawUrl(repo,branch,path){return `https://raw.githubusercontent.com/${repo}/${encodeURIComponent(branch)}/${path.split('/').map(encodeURIComponent).join('/')}`;}
+  async function getText(repo,branch,path){const r=await fetch(rawUrl(repo,branch,path),{cache:'no-cache'});if(!r.ok)throw new Error(`${path}: HTTP ${r.status}. Перевір джерело та гілку.`);return (await r.text()).replace(/^\uFEFF/,'');}
+  function parseTxt(content,name='file'){
+    const records=[],byKey=new Map(),duplicates=[],malformed=[];let current=null;
+    const lines=content.replace(/\r\n?/g,'\n').split('\n');
+    for(let i=0;i<lines.length;i++){
+      const line=lines[i],t=line.trim();if(!t)continue;
+      if(t.startsWith('[')&&t.endsWith(']')){const key=t.slice(1,-1);if(!key){malformed.push({line:i+1,reason:'Порожній ключ'});current=null;continue;}if(byKey.has(key))duplicates.push({key,line:i+1});current={key,line:i+1,properties:Object.create(null)};records.push(current);if(!byKey.has(key))byKey.set(key,current);continue;}
+      if(!current){if(t.includes('='))malformed.push({line:i+1,reason:'Поле поза секцією'});continue;}
+      const p=line.indexOf('=');if(p<1){malformed.push({line:i+1,reason:'Очікується key=value'});continue;}
+      const key=line.slice(0,p).trim();if(Object.hasOwn(current.properties,key))malformed.push({line:i+1,reason:`Повторне поле ${key} у [${current.key}]`});current.properties[key]=line.slice(p+1);
+    }
+    return {name,records,byKey,duplicates,malformed};
+  }
+  function parseTerms(text){const out=new Map();let section='';for(const line of text.split(/\r?\n/)){const t=line.trim();if(!t)continue;if(t.startsWith('[')&&t.endsWith(']')){section=t.slice(1,-1);continue;}if(section!=='uk')continue;const i=line.indexOf('=');if(i>0){const a=decode(line.slice(0,i)).trim(),b=decode(line.slice(i+1)).trim();if(a&&b)out.set(a,b);}}return out;}
+  function allTokens(v){const s=decode(v);const patterns=[/\{\{[^{}]+\}\}/g,/\{[A-Za-z_][\w.-]*\}/g,/\{\d+\}/g,/%\d+\$[sdif]/g,/%(?:[sdif])/g,/%[A-Z][A-Z0-9_]*%/g,/<\/?[A-Za-z][^>]*>/g,/\\u[0-9a-fA-F]{4}/g,/https?:\/\/[^\s"')\]]+/g];return patterns.flatMap(p=>s.match(p)||[]).sort();}
+  function same(a,b){return a.length===b.length&&a.every((x,i)=>x===b[i]);}
+  function glossaryMatches(source){const text=decode(source),hits=[];for(const [term,value] of state.terms){const safe=term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');try{if(new RegExp(`(^|[^\\p{L}\\p{N}_])${safe}($|[^\\p{L}\\p{N}_])`,'iu').test(text))hits.push({term,value});}catch{if(text.toLowerCase().includes(term.toLowerCase()))hits.push({term,value});}}return hits.sort((a,b)=>b.term.length-a.term.length).slice(0,10);}
+  function translationMemory(source){const n=normalize(source);if(!n)return[];const out=new Map();for(const file of [state.uk,state.appUk]){if(!file)continue;for(const r of file.records){if(normalize(getOriginal(r))!==n)continue;const t=getTranslation(r);if(!t?.trim())continue;const value=decode(t).trim();if(!out.has(value))out.set(value,[]);out.get(value).push(`${file.name}: ${r.key}`);}}return [...out.entries()].map(([value,where])=>({value,where}));}
+  function localeExamples(key){const out=[];const priority=[...fallbackLocales];for(const code of priority){const file=state.locales.get(code),r=file?.byKey.get(key),v=getTranslation(r);if(v?.trim())out.push({code,name:localeNames[code]||code,value:decode(v).trim()});}for(const [code,file] of state.locales){if(priority.includes(code))continue;const v=getTranslation(file.byKey.get(key));if(v?.trim())out.push({code,name:localeNames[code]||code,value:decode(v).trim()});}return out;}
+  function recordIssue(en,uk){const issues=[];if(!uk){issues.push('Немає цього ключа в uk.txt');return issues;}if(getOriginal(en)===undefined)issues.push('В англійському записі немає original=');if(getOriginal(uk)===undefined)issues.push('В українському записі немає original=');else if(getOriginal(en)!==undefined&&decode(getOriginal(en))!==decode(getOriginal(uk)))issues.push('Англійський оригінал у uk.txt застарів');if(getTranslation(uk)===undefined)issues.push('Відсутнє поле translation=');const t=getTranslation(uk);if(t?.trim()&&getOriginal(en)!==undefined&&!same(allTokens(getOriginal(en)),allTokens(t)))issues.push('Плейсхолдери або службові фрагменти не збігаються');return issues;}
+  function buildRows(){const rows=[];for(const en of state.en.records){const uk=state.uk.byKey.get(en.key),issues=recordIssue(en,uk),value=getTranslation(uk),translated=!!value?.trim();const status=issues.length?'problem':translated?'done':'todo';rows.push({key:en.key,en,uk,status,issues,kind:'record'});}const enKeys=new Set(state.en.records.map(r=>r.key));for(const x of state.uk.records){if(!enKeys.has(x.key))rows.push({key:x.key,en:null,uk:x,status:'problem',issues:['Зайвий ключ: його немає в en.txt'],kind:'extra'});}for(const x of state.uk.duplicates)rows.push({key:`Дублікат: ${x.key}`,en:null,uk:null,status:'problem',issues:[`Повторний ключ у uk.txt, рядок ${x.line}`],kind:'file'});for(const x of state.uk.malformed)rows.push({key:`Рядок ${x.line}`,en:null,uk:null,status:'problem',issues:[`Некоректний рядок у uk.txt: ${x.reason}`],kind:'file'});state.rows=rows;}
+  function filteredRows(){const q=$('searchInput').value.trim().toLocaleLowerCase('uk'),section=$('sectionFilter').value;return state.rows.filter(r=>r.status===state.activeTab&&(!section||sectionOf(r.key)===section)&&(!q||r.key.toLocaleLowerCase('uk').includes(q)||decode(getOriginal(r.en)||'').toLocaleLowerCase('uk').includes(q)||r.issues.join(' ').toLocaleLowerCase('uk').includes(q)));}
+  function setActive(key){state.selectedKey=key;renderList();renderDetail();}
+  function renderTabs(){for(const name of ['todo','done','problem']){$(`${name}Count`).textContent=fmt(state.rows.filter(r=>r.status===name).length);}document.querySelectorAll('[data-state]').forEach(b=>b.classList.toggle('active',b.dataset.state===state.activeTab));}
+  function renderList(){const rows=filteredRows();$('listCaption').textContent=state.activeTab==='todo'?'Потребують перекладу':state.activeTab==='done'?'Перекладені':'Потребують уваги';$('entryCount').textContent=`${fmt(rows.length)} записів`;$('entryList').innerHTML=rows.length?rows.map(r=>`<div class="item ${state.selectedKey===r.key?'selected':''}" data-key="${esc(r.key)}"><div class="item-line"><span class="item-key">${esc(r.key)}</span><span class="item-state ${r.status}">${r.status==='done'?'готово':r.status==='todo'?'не зроблено':'проблема'}</span></div><div class="item-snippet">${esc(r.en?decode(getOriginal(r.en)||''):(r.issues[0]||''))}</div></div>`).join(''):'<div class="empty-state">Нічого не знайдено.</div>';if(!rows.some(r=>r.key===state.selectedKey))state.selectedKey=rows[0]?.key||null;}
+  function bundleText(en,examples){const parts=[`English (EN):\n${decode(getOriginal(en)||'')}`];for(const m of examples.slice(0,4))parts.push(`${m.name} (${m.code}):\n${m.value}`);return parts.join('\n\n');}
+  function copyButton(value,label='Копіювати'){return `<button type="button" data-copy="${esc(value)}">${label}</button>`;}
+  function renderDetail(){const row=state.rows.find(r=>r.key===state.selectedKey);if(!row){$('entryDetail').innerHTML='<div class="empty-state">У цьому списку поки немає записів.</div>';return;}if(!row.en){$('entryDetail').innerHTML=`<div class="detail-head"><div class="detail-title"><div class="key-label">Проблема у файлі</div><h2>${esc(row.key)}</h2></div></div><div class="problem-box">${row.issues.map(esc).join('<br>')}</div><p class="copy-note">Це структурна проблема українського файлу, а не окремий текст для перекладу.</p>`;return;}
+    const en=row.en,uk=row.uk,examples=localeExamples(row.key),shown=examples.slice(0,4),extra=examples.slice(4),src=decode(getOriginal(en)||''),bundle=bundleText(en,examples);
+    let html=`<div class="detail-head"><div class="detail-title"><div class="key-label">${esc(row.key)}</div><h2>${row.status==='done'?'Перекладено':row.status==='problem'?'Потребує перевірки':'Текст для перекладу'}</h2></div><div class="detail-actions">${copyButton(bundle,'Копіювати блок')}<a class="link" href="https://github.com/${esc($('targetRepo').value.trim())}/edit/${encodeURIComponent($('targetBranch').value.trim())}/website/uk.txt" target="_blank" rel="noopener">Відкрити uk.txt ↗</a></div></div>`;
+    if(row.issues.length)html+=`<div class="problem-box">${row.issues.map(esc).join('<br>')}</div>`;
+    html+=`<div class="section-label">Оригінал · English (EN)</div><div class="text-block source"><span class="lang">EN</span><p>${esc(src)}</p>${copyButton(src)}</div>`;
+    if(shown.length){html+='<div class="section-label">Приклади з інших мов</div><div class="examples">';for(const m of shown)html+=`<div class="text-block"><span class="lang" title="${esc(m.name)}">${esc(m.code.toUpperCase())} · ${esc(m.name)}</span><p>${esc(m.value)}</p>${copyButton(m.value)}</div>`;html+='</div>';}
+    if(extra.length){html+=`<details class="more-examples"><summary>Ще ${extra.length} мов</summary><div class="examples" style="margin-top:8px">`;for(const m of extra)html+=`<div class="text-block"><span class="lang" title="${esc(m.name)}">${esc(m.code.toUpperCase())} · ${esc(m.name)}</span><p>${esc(m.value)}</p>${copyButton(m.value)}</div>`;html+='</div></details>';}
+    if(uk&&getTranslation(uk)?.trim())html+=`<div class="section-label">Поточний український переклад · UK</div><div class="text-block uk"><span class="lang">UK</span><p>${esc(decode(getTranslation(uk)))}</p>${copyButton(decode(getTranslation(uk)))}</div>`;
+    const memory=translationMemory(getOriginal(en));if(memory.length){html+='<div class="memory"><div class="section-label" style="margin-top:0">Вже перекладали так</div>';for(const m of memory.slice(0,3))html+=`<div class="memory-row"><strong>${esc(m.value)}</strong><span class="item-state">${esc(m.where[0])}</span>${copyButton(m.value)}</div>`;html+='</div>';}
+    html+='<p class="copy-note">«Копіювати блок» збирає оригінал і перші чотири приклади в один простий текст. Усі приклади можна скопіювати окремо.</p>';
+    $('entryDetail').innerHTML=html;
+  }
+  async function copyText(value,button){try{await navigator.clipboard.writeText(value);}catch{const area=document.createElement('textarea');area.value=value;area.style.position='fixed';area.style.opacity='0';document.body.append(area);area.select();document.execCommand('copy');area.remove();}const old=button.textContent;button.textContent='Скопійовано';setTimeout(()=>{if(button.isConnected)button.textContent=old;},1100);}
+  function renderAll(){buildRows();const groups=new Set(state.en.records.map(r=>sectionOf(r.key)));$('sectionFilter').innerHTML='<option value="">Усі розділи</option>'+[...groups].map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join('');renderTabs();$('workspaceSection').hidden=false;const first=filteredRows()[0];state.selectedKey=first?.key||null;renderList();renderDetail();}
+  async function load(){const btn=$('loadBtn');btn.disabled=true;btn.textContent='Завантажую…';try{const source=repoParts($('sourceRepo').value,'джерела'),target=repoParts($('targetRepo').value,'цільового репозиторію'),sb=$('sourceBranch').value.trim(),tb=$('targetBranch').value.trim();if(!sb||!tb)throw new Error('Вкажи обидві гілки.');$('statusLine').innerHTML='<span class="spinner"></span>Завантажую EN та UK…';const core=await Promise.all([getText(source,sb,'website/en.txt'),getText(target,tb,'website/uk.txt'),getText(source,sb,'translations/uk.txt').catch(()=>''),getText(source,sb,'terms.txt'),getText(source,sb,'website/locales.json')]);state.en=parseTxt(core[0],'website/en.txt');state.uk=parseTxt(core[1],'website/uk.txt');state.appUk=core[2]?parseTxt(core[2],'translations/uk.txt'):null;state.terms=parseTerms(core[3]);let codes=fallbackLocales;try{const data=JSON.parse(core[4]);if(Array.isArray(data.locales))codes=data.locales.filter(x=>x!=='en'&&x!=='uk'&&x!=='ru');}catch{};$('statusLine').innerHTML='<span class="spinner"></span>Завантажую приклади інших мов…';const loaded=await Promise.allSettled(codes.map(async code=>[code,parseTxt(await getText(source,sb,`website/${code}.txt`),`website/${code}.txt`)]));state.locales=new Map(loaded.filter(x=>x.status==='fulfilled').map(x=>x.value));state.activeTab='todo';state.selectedKey=null;renderAll();const failed=loaded.filter(x=>x.status==='rejected').length;$('statusLine').textContent=`Оновлено · ${fmt(state.en.records.length)} записів · ${state.locales.size} мов${failed?` · не завантажено ${failed}`:''}`;}catch(e){$('statusLine').textContent=`Помилка: ${e.message}`;}finally{btn.disabled=false;btn.textContent='Оновити з GitHub';}}
+  $('loadBtn').addEventListener('click',load);
+  $('searchInput').addEventListener('input',()=>{renderList();renderDetail();});
+  $('sectionFilter').addEventListener('change',()=>{renderList();renderDetail();});
+  $('entryList').addEventListener('click',e=>{const el=e.target.closest('[data-key]');if(el)setActive(el.dataset.key);});
+  $('entryDetail').addEventListener('click',e=>{const btn=e.target.closest('[data-copy]');if(btn)copyText(btn.dataset.copy,btn);});
+  document.querySelectorAll('[data-state]').forEach(btn=>btn.addEventListener('click',()=>{state.activeTab=btn.dataset.state;state.selectedKey=null;renderTabs();renderList();renderDetail();}));
+  load();
+})();
+</script>
+</body>
+</html>
