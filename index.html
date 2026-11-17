@@ -15,12 +15,16 @@
 .header-actions{position:relative}.changes-menu{position:relative}.changes-menu>summary{list-style:none}.changes-menu>summary::-webkit-details-marker{display:none}.changes-trigger{display:flex;align-items:center;gap:7px;background:#343539;border:1px solid var(--line);border-radius:5px;padding:6px 10px;cursor:pointer;color:var(--text);white-space:nowrap}.changes-trigger:hover{border-color:var(--accent);background:#3a3b40}.pending-count{display:inline-grid;place-items:center;min-width:19px;height:19px;padding:0 5px;border-radius:10px;background:#514875;color:#fff;font-size:11px}.changes-popover{position:absolute;z-index:30;right:0;top:calc(100% + 8px);width:min(430px,calc(100vw - 24px));max-height:min(70vh,620px);display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 14px 40px #0009;overflow:hidden}.changes-popover-head,.changes-popover-foot{display:flex;align-items:center;gap:10px;padding:11px 12px}.changes-popover-head{justify-content:space-between;border-bottom:1px solid var(--line)}.changes-popover-head strong{font-size:13px}.changes-muted{font-size:11px;color:var(--muted);margin-top:2px}.changes-popover-head button{font-size:11px;padding:4px 7px}.pending-list{overflow:auto;min-height:70px;max-height:440px;overscroll-behavior:contain}.pending-empty{padding:22px 14px;text-align:center;color:var(--muted);font-size:12px}.pending-entry{padding:10px 12px;border-bottom:1px solid #393a3e}.pending-entry-top{display:flex;align-items:center;gap:8px}.pending-entry-key{font:11px Consolas,monospace;color:#c9bafa;overflow-wrap:anywhere;flex:1;min-width:0}.pending-entry-actions{display:flex;gap:5px;flex-shrink:0}.pending-entry-actions button{font-size:10px;padding:3px 6px}.pending-diff{display:grid;gap:4px;margin-top:7px;font-size:11px}.pending-old{color:var(--muted)}.pending-new{color:var(--green);white-space:pre-wrap;overflow-wrap:anywhere}.pending-flag{font-size:10px;color:var(--red);margin-top:5px}.changes-popover-foot{border-top:1px solid var(--line);align-items:flex-end;justify-content:space-between}.changes-popover-foot .changes-muted{max-width:150px}.changes-popover-foot button{font-size:11px;white-space:nowrap}.item.pending{background:#2d2c35}.item.pending .item-key:after{content:' ·';color:var(--yellow)}.item-state.pending{color:var(--yellow)}.editor-queued{font-size:11px;color:var(--yellow)}.editor-discard{font-size:11px;padding:4px 7px}
 @media(max-width:760px){.wrap{padding:12px}.workspace{grid-template-columns:1fr;grid-template-rows:minmax(210px,38%) minmax(0,1fr);height:min(78vh,760px);min-height:500px}.left{border-right:0;border-bottom:1px solid var(--line);height:auto;min-height:0}.right{min-height:0}.settings-grid{grid-template-columns:1fr 1fr}.header{align-items:flex-start}.header-actions{flex-direction:column;align-items:flex-end;gap:4px}.state-line{max-width:180px;text-align:right}}
 @media(max-width:480px){.header h1{font-size:18px}.tabs{overflow:auto}.tab{padding:8px 10px;white-space:nowrap}.list-toolbar{flex-wrap:wrap}.list-toolbar input{width:100%;flex-basis:100%}.list-toolbar select{max-width:none;flex:1}.right{padding:13px}.detail-head{flex-wrap:wrap}.detail-actions{width:100%}.text-block{gap:7px}.text-block .lang{min-width:76px}}
+
+.stats-panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);padding:10px 12px;margin:0 0 12px}.stats-topline{display:flex;align-items:center;justify-content:space-between;gap:12px}.stats-title{display:flex;align-items:baseline;gap:10px;min-width:0}.stats-title strong{font-size:12px;font-weight:600}.stats-title>span{font-size:13px;color:var(--green);font-variant-numeric:tabular-nums}.stats-details{position:relative}.stats-details>summary{cursor:pointer;color:var(--muted);font-size:11px;list-style:none;white-space:nowrap}.stats-details>summary::-webkit-details-marker{display:none}.stats-details>summary:after{content:" ▾"}.stats-details[open]>summary:after{content:" ▴"}.section-stats-list{display:grid;gap:7px;margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}.section-stat-row{display:grid;grid-template-columns:minmax(90px,160px) minmax(70px,1fr) auto;align-items:center;gap:10px;font-size:11px}.section-stat-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text)}.section-stat-track{height:5px;background:#1d1e21;border-radius:5px;overflow:hidden}.section-stat-fill{height:100%;background:var(--green);border-radius:5px}.section-stat-count{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}.section-stat-count .draft-mark{color:var(--yellow);margin-left:4px}.stats-empty{font-size:11px;color:var(--muted)}.stats-track{height:6px;background:#1d1e21;border-radius:6px;overflow:hidden;margin:9px 0 7px}.stats-fill{height:100%;width:0;background:var(--green);border-radius:6px;transition:width .2s ease}.stats-metrics{display:flex;align-items:center;flex-wrap:wrap;gap:5px 17px;font-size:11px;color:var(--muted)}.stats-metrics strong{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}.stats-metrics span:first-child strong{color:var(--green)}
+@media(max-width:700px){.stats-panel{padding:9px 10px}.stats-metrics{gap:5px 11px}.section-stat-row{grid-template-columns:minmax(75px,110px) minmax(45px,1fr) auto;gap:7px}}
+
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="header">
-    <div class="brand"><div class="eyebrow">Obsidian · website · uk · v0.7</div><h1>Переклад сайту</h1></div>
+    <div class="brand"><div class="eyebrow">Obsidian · website · uk · v0.10</div><h1>Переклад сайту</h1></div>
     <div class="header-actions"><span id="statusLine" class="state-line" aria-live="polite">Дані ще не завантажено</span><details class="changes-menu" id="changesMenu">
       <summary class="changes-trigger">Зміни <span id="pendingCount" class="pending-count">0</span></summary>
       <div class="changes-popover" role="region" aria-label="Зміни з останнього коміту">
@@ -48,6 +52,23 @@
       <button class="tab" data-state="todo">Не зроблено <span class="tab-count" id="todoCount">0</span></button>
       <button class="tab" data-state="problem">Проблеми <span class="tab-count" id="problemCount">0</span></button>
     </nav>
+
+    <section class="stats-panel" aria-label="Статистика перекладу">
+      <div class="stats-topline">
+        <div class="stats-title"><strong>Прогрес перекладу</strong><span id="statsPercent">—</span></div>
+        <details class="stats-details" id="statsDetails">
+          <summary>За розділами</summary>
+          <div id="sectionStatsList" class="section-stats-list"><div class="stats-empty">Статистика з’явиться після завантаження.</div></div>
+        </details>
+      </div>
+      <div class="stats-track" role="progressbar" aria-label="Частка готових перекладів" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="statsProgressTrack"><div class="stats-fill" id="statsProgressFill"></div></div>
+      <div class="stats-metrics">
+        <span><strong id="statsDone">0</strong>/<span id="statsTotal">0</span> готово</span>
+        <span><strong id="statsTodo">0</strong> не зроблено</span>
+        <span><strong id="statsProblems">0</strong> проблеми</span>
+        <span><strong id="statsDrafts">0</strong> у чернетках</span>
+      </div>
+    </section>
 
     <main class="workspace">
       <aside class="left">
@@ -143,7 +164,34 @@
   function buildRows(){const rows=[];for(const en of state.en.records){const uk=state.uk.byKey.get(en.key),issues=recordIssue(en,uk),value=getTranslation(uk),translated=!!value?.trim();const status=issues.length?'problem':translated?'done':'todo';rows.push({key:en.key,en,uk,status,issues,kind:'record',pending:state.pendingChanges.has(en.key)});}const enKeys=new Set(state.en.records.map(r=>r.key));for(const x of state.uk.records){if(!enKeys.has(x.key))rows.push({key:x.key,en:null,uk:x,status:'problem',issues:['Зайвий ключ: його немає в en.txt'],kind:'extra'});}for(const x of state.uk.duplicates)rows.push({key:`Дублікат: ${x.key}`,en:null,uk:null,status:'problem',issues:[`Повторний ключ у uk.txt, рядок ${x.line}`],kind:'file'});for(const x of state.uk.malformed)rows.push({key:`Рядок ${x.line}`,en:null,uk:null,status:'problem',issues:[`Некоректний рядок у uk.txt: ${x.reason}`],kind:'file'});state.rows=rows;}
   function filteredRows(){const q=$('searchInput').value.trim().toLocaleLowerCase('uk'),section=$('sectionFilter').value;return state.rows.filter(r=>r.status===state.activeTab&&(!section||sectionOf(r.key)===section)&&(!q||r.key.toLocaleLowerCase('uk').includes(q)||decode(getOriginal(r.en)||'').toLocaleLowerCase('uk').includes(q)||r.issues.join(' ').toLocaleLowerCase('uk').includes(q)));}
   function setActive(key){state.selectedKey=key;renderList();renderDetail();}
-  function renderTabs(){for(const name of ['todo','done','problem']){$(`${name}Count`).textContent=fmt(state.rows.filter(r=>r.status===name).length);}document.querySelectorAll('[data-state]').forEach(b=>b.classList.toggle('active',b.dataset.state===state.activeTab));}
+  function renderStats(){
+    if(!state.en)return;
+    const total=state.en.records.length;
+    const byKey=new Map(state.rows.filter(r=>r.kind==='record').map(r=>[r.key,r]));
+    let done=0,todo=0,recordProblems=0;
+    const sections=new Map();
+    for(const en of state.en.records){
+      const row=byKey.get(en.key);
+      const section=sectionOf(en.key);
+      if(!sections.has(section))sections.set(section,{total:0,done:0,todo:0,problem:0,drafts:0});
+      const stats=sections.get(section);stats.total++;
+      if(row?.status==='done'){done++;stats.done++;}
+      else if(row?.status==='todo'){todo++;stats.todo++;}
+      else{recordProblems++;stats.problem++;}
+      const draft=state.pendingChanges.get(en.key);
+      if(draft){stats.drafts++;}
+    }
+    const structuralProblems=state.rows.filter(r=>r.kind!=='record'&&r.status==='problem').length;
+    const problems=recordProblems+structuralProblems;
+    const drafts=state.pendingChanges.size;
+    const percent=total?done/total*100:0;
+    $('statsPercent').textContent=`${percent.toLocaleString('uk-UA',{minimumFractionDigits:1,maximumFractionDigits:2})}%`;
+    $('statsDone').textContent=fmt(done);$('statsTotal').textContent=fmt(total);$('statsTodo').textContent=fmt(todo);$('statsProblems').textContent=fmt(problems);$('statsDrafts').textContent=fmt(drafts);
+    $('statsProgressFill').style.width=`${percent}%`;$('statsProgressTrack').setAttribute('aria-valuenow',percent.toFixed(2));
+    const order=[...sections.entries()].sort((a,b)=>a[0].localeCompare(b[0],'en'));
+    $('sectionStatsList').innerHTML=order.map(([name,x])=>{const pct=x.total?x.done/x.total*100:0;return `<div class="section-stat-row"><span class="section-stat-name" title="${esc(name)}">${esc(name)}</span><div class="section-stat-track" title="${pct.toFixed(1)}%"><div class="section-stat-fill" style="width:${pct}%"></div></div><span class="section-stat-count">${fmt(x.done)}/${fmt(x.total)}${x.drafts?`<span class="draft-mark">+${fmt(x.drafts)}</span>`:''}</span></div>`;}).join('')||'<div class="stats-empty">Немає записів для статистики.</div>';
+  }
+  function renderTabs(){for(const name of ['todo','done','problem']){$(`${name}Count`).textContent=fmt(state.rows.filter(r=>r.status===name).length);}document.querySelectorAll('[data-state]').forEach(b=>b.classList.toggle('active',b.dataset.state===state.activeTab));renderStats();}
   function renderList(){const rows=filteredRows();$('listCaption').textContent=state.activeTab==='todo'?'Потребують перекладу':state.activeTab==='done'?'Перекладені':'Потребують уваги';$('entryCount').textContent=`${fmt(rows.length)} записів`;$('entryList').innerHTML=rows.length?rows.map(r=>`<div class="item ${state.selectedKey===r.key?'selected':''} ${state.pendingChanges.has(r.key)?'pending':''}" data-key="${esc(r.key)}"><div class="item-line"><span class="item-key">${esc(r.key)}</span><span class="item-state ${state.pendingChanges.has(r.key)?'pending':r.status}">${state.pendingChanges.has(r.key)?'у черзі':r.status==='done'?'готово':r.status==='todo'?'не зроблено':'проблема'}</span></div><div class="item-snippet">${esc(r.en?decode(getOriginal(r.en)||''):(r.issues[0]||''))}</div></div>`).join(''):'<div class="empty-state">Нічого не знайдено.</div>';if(!rows.some(r=>r.key===state.selectedKey))state.selectedKey=rows[0]?.key||null;}
   function bundleText(en,examples){const parts=[`English (EN):\n${decode(getOriginal(en)||'')}`];for(const m of examples.slice(0,4))parts.push(`${m.name} (${m.code}):\n${m.value}`);return parts.join('\n\n');}
   function copyButton(value,label='Копіювати'){return `<button type="button" data-copy="${esc(value)}">${label}</button>`;}
