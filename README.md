@@ -1,18 +1,28 @@
 # Obsidian Translation Assistant
 
-A small, static browser tool for translating `website/uk.txt` in the Obsidian translations repository.
+A small browser-only helper for translating Obsidian website strings.
 
-## Deploy for free with GitHub Pages
+## Publish with GitHub Pages
 
-1. Create a separate public repository, for example `danils0/obsidian-translation-assistant`.
-2. Put `index.html` in the repository root.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch**, select the default branch (`main` or `master`) and `/(root)`.
-5. Open the published Pages URL.
+1. Put `index.html` in the root of your separate `obsidian-translation-assistant` repository.
+2. In **Settings → Pages**, choose **Deploy from a branch**, your default branch (`main` or `master`), and `/(root)`.
+3. Open the published Pages URL.
 
-No Node.js, build step, npm packages, database, or paid API is required.
+No Node.js, npm dependencies, build step, database, or paid API is required.
 
-## Editing translations
+## Current features (v0.6)
+
+- Reads the English website source, your Ukrainian website file, other website locales, Ukrainian app translations, and the Ukrainian glossary from GitHub.
+- Shows translated, untranslated, and problematic strings in a compact two-pane interface.
+- Provides source text and examples from other languages for copying.
+- Validates placeholders and protected fragments.
+- Lets you edit Ukrainian translations directly in the page.
+- Collects edits into a small **Зміни** menu. The menu shows the key, previous text, and proposed text; you can open or remove an individual draft, or discard all drafts.
+- Draft changes persist in this browser's `localStorage` until committed. The GitHub token is never stored there.
+- **Зберегти N змін одним комітом** writes all queued edits to `website/uk.txt` in one GitHub Contents API update, creating one Git commit for the whole batch.
+- Before committing, the app fetches the latest file and checks that none of the translations changed remotely since the draft was created. On conflict, the drafts remain saved and the commit is blocked.
+
+## GitHub write access
 
 Reading and copying are public. Writing is disabled until the user connects GitHub with a fine-grained personal access token.
 
@@ -25,13 +35,11 @@ Create a token at <https://github.com/settings/personal-access-tokens/new>:
 - No other permissions are needed
 - Set a short expiration, such as 7 or 30 days
 
-Paste the token into **Підключити GitHub**. The tool uses it directly in the browser to call `api.github.com`. It is held only in page memory, not saved in `localStorage` or sent to a separate service. Reloading or closing the tab disconnects it.
+Paste the token into **Підключити GitHub**. The token is held only in page memory, not saved in `localStorage` and not sent to a separate service. Reloading or closing the tab disconnects it.
 
-Each save updates only the selected key's `original=` (to match the current English source) and `translation=` fields in `website/uk.txt`, using the GitHub Contents API. Each successful save creates a Git commit in the selected target branch. The app re-fetches the latest file before writing and detects if the same translation changed since the page was loaded.
+The app updates only `website/uk.txt` in the selected target repository and branch. Anyone can view the public page, but visitors cannot write to your repository unless they have an account that already has write access and a token scoped to that repository. Never put a token in the source code, a public issue, a commit, or a screenshot.
 
-Anyone can open the public page, but visitors cannot write to your repository unless they authenticate with a GitHub account that already has write permission and a token scoped to that repository. Do not put a token in the source code, a public issue, a commit, or a screenshot. Revoke a token in GitHub settings if you no longer need it.
-
-## Data sources
+## Sources
 
 - English source and language examples: `obsidianmd/obsidian-translations`
 - Ukrainian target: `danils0/obsidian-translations`
