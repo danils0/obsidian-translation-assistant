@@ -10,11 +10,11 @@ A small browser-only helper for translating Obsidian website strings.
 
 No Node.js, npm dependencies, build step, database, or paid API is required.
 
-## Current features (v0.6)
+## Current features (v0.9)
 
 - Reads the English website source, your Ukrainian website file, other website locales, Ukrainian app translations, and the Ukrainian glossary from GitHub.
 - Shows translated, untranslated, and problematic strings in a compact two-pane interface.
-- Provides source text and examples from other languages for copying.
+- Provides source text and examples from other languages for copying; Russian (RU) is included in the collapsed additional-language list. The four initially visible examples prioritize other locales.
 - Validates placeholders and protected fragments.
 - Lets you edit Ukrainian translations directly in the page.
 - Collects edits into a small **Зміни** menu. The menu shows the key, previous text, and proposed text; you can open or remove an individual draft, or discard all drafts.
@@ -45,3 +45,18 @@ The app updates only `website/uk.txt` in the selected target repository and bran
 - Ukrainian target: `danils0/obsidian-translations`
 
 The repositories and branches can be changed under **Джерела GitHub**.
+
+
+## Commit message summaries (v0.7)
+
+Batch commits now use a short message based on the edited sections and whether the batch adds new translations or improves existing ones. Examples:
+
+- `Add Ukrainian translations: account billing (8 strings)`
+- `Add Ukrainian translations: navigation and website pages (12 strings)`
+- `Improve Ukrainian translations: features (3 strings)`
+- `Update Ukrainian translations: account billing and authentication`
+
+
+## v0.9
+
+- Russian (RU) is now shown under **Ще мов** (additional languages), not among the four initially visible examples. The copy block uses the four initially visible non-Russian examples.
